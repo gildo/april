@@ -1,0 +1,5 @@
+nick: rube
+log: true
+channel: "0x90"
+server: irc.azzurra.org
+port: 6667

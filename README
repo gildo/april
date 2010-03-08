@@ -1,1 +1,4 @@
-A stupid IRC bot written in Ruby.
+rube,
+a smartless IRC bot written in ruby.
+
+vim config.rb && ruby perry.rb
