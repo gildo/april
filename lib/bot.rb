@@ -33,8 +33,8 @@ module Rube
         log "RECEIVED: #{msg}"
         puts msg
         case msg.strip!
-          when /PING :/
-            say "PONG :#{$1}"
+          when /^PING (\S+)/i
+            write "PONG :#{$1}"
           when /PRIVMSG #{config["nick"]}/
             handlePrivateMessages msg
 #          when /PRIVMSG ##{config["channel"]}/
