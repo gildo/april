@@ -12,9 +12,6 @@ module Rube
     def initialize(opts={})
       @config = YAML::load_file("config.yml")
       connect
-      loop do
-        parse(@socket.gets)
-      end
     end
   
     def connect
