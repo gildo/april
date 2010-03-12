@@ -1,5 +1,6 @@
 nick: rube
 log: true
 channel: nihil
-server: irc.azzurra.org
+server: fiesta
 port: 6667
+modules: Quotes Greetings
