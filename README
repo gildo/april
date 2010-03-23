@@ -1,4 +1,4 @@
 rube,
 a smartless IRC bot written in ruby.
 
-vim config.rb && ruby perry.rb
+vim config.yml && ruby perry.rb
