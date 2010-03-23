@@ -53,4 +53,3 @@ module Greetings
     end
   end
 end
-

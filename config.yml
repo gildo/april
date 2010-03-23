@@ -1,6 +1,6 @@
-nick: rube
-log: true
-channel: nihil
-server: fiesta
+nick: "rube"
+logging: true
+channel: "nihil"
+server: "0x00.ath.cx"
 port: 6667
-modules: Quotes Greetings
+modules: Quotes Greetings Parser Logger

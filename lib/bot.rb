@@ -1,44 +1,53 @@
 #!/usr/bin/env ruby
 require 'socket'
 require 'yaml'
-require 'lib/utils'
-require 'lib/parser'
-require 'lib/main'
+
 
 module Rube
   class Bot
 
-    attr_accessor :config, :modules
+    attr_accessor :config, :modules, :server, :channel, :port, :nick, :log
 
-    def initialize(opts={})
+    def initialize()
       @config = YAML::load_file("config.yml")
-      @modules = @config["modules"].split
-      puts "Loading modules #{modules}"
+      init_args
+      @modules = modules.split
+      puts "Loading modules: #{modules}"
       load_modules
       connect
     end
 
+    def init_args
+      @config.each do |k,v|
+        self.class.send(:define_method, k, proc{v})
+      end
+    end
+
+
     def connect
-      @socket = TCPSocket.new(@config["server"], @config["port"])
-      response "USER #{config["nick"]} #{config["nick"]} #{config["nick"]} :#{config["nick"]}"
-      response "NICK #{config["nick"]}"
-      response "JOIN ##{config["channel"]}"
-      log "User #{config["nick"]} joined channel #{config["channel"]} on server #{config["server"]}"
-      @get = @socket.gets
+      @socket = TCPSocket.new(server, @config["port"])
+      write "USER #{nick} #{nick} #{nick} :#{nick}"
+      write "NICK #{nick}"
+      write "JOIN ##{channel}"
       listen
     end
 
     def listen
-      @socket.each do |msg|
-        log "RECEIVED: #{msg}"
-        parse(@socket.gets)
+      @socket.each do |get|
+        Logger::Lager.new.log "RECEIVED: #{get}"
+        parse(get)
       end
     end
 
-    def response(message)
-      puts ">> #{message.strip}"
-      @socket.puts(message)
-      log "Wrote #{message.chomp} to #{config["server"]}"
+    def write(msg)
+      puts ">> #{msg}"
+      @socket.puts "#{msg}\n"
+    end
+
+    def load_modules
+      @modules.each do |mod|
+        require "lib/modules/#{mod}"
+      end
     end
 
   end
