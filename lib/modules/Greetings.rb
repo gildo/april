@@ -1,8 +1,8 @@
 module Greetings
 
   def self.greet
-
   end
+
   def day_part
     cur_hour = Time::now.hour
     return :morning if cur_hour >= 5 and cur_hour < 12

@@ -1,8 +1,8 @@
 module Quote
-  class Write
 
+  class Write
     def initialize
-      @array = Array.new
+      @array = []
     end
 
     def add(quote)
@@ -11,7 +11,7 @@ module Quote
 
     def dump
       quotes = YAML::load(File.new("quotes.yml"))
-      rarray = Array.new
+      rarray = []
 
       if quotes != nil
         rarray = @array + quotes
@@ -21,7 +21,7 @@ module Quote
       end
 
       File.open("quotes.yml", "w+") do |s|
-        obj = YAML::dump( r)
+        obj = YAML::dump(r)
         s.puts(obj)
         s.close
       end

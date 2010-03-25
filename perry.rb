@@ -1,4 +1,4 @@
 #! /usr/bin/env ruby
-require "lib/bot"
+require "lib/Rube"
 
-bot = Rube::Bot.new
+bot = Rube.new
