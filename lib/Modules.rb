@@ -2,7 +2,7 @@ module Modules
 
   attr_accessor :modules
 
- puts "Loading modules: #{@modules}"
+  puts "Loading modules: #{@modules}"
 
   def load_modules
     @modules.each do |mod|
