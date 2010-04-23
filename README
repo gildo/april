@@ -1,4 +1,4 @@
-rube,
-a smartless IRC bot written in ruby.
+april, a smartless IRC lib for bots for smartless people
 
-vim config.yml && ruby perry.rb
+vim april.conf && ruby bot.rb
+
