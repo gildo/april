@@ -1,5 +1,5 @@
 require 'lib/april'
 
-client = IRC::Client.new()
+client = Client.new()
 client.connect
 
