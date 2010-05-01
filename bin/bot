@@ -1,0 +1,41 @@
+#! /usr/bin/env ruby
+
+require 'april'
+require 'getoptlong'
+
+home = ENV["HOME"]
+
+args = GetoptLong.new(
+  ['--version', '-v', GetoptLong::NO_ARGUMENT],
+  ['--help', '-h', GetoptLong::NO_ARGUMENT],
+  ['--config', '-f', GetoptLong::REQUIRED_ARGUMENT]
+)
+
+options = {
+  :config  => "#{home}/.aprilrc"
+}
+
+args.each {|option, value|
+  case option
+
+  when '--version'
+    puts "April library version: #{APRIL::VERSION}"
+    exit 0
+
+  when '--config'
+    options[:config] = value
+
+  when '--help'
+    puts "April commands:
+    --config
+    --version
+    "
+    exit 0
+
+  end
+}
+
+
+client = APRIL::Client.new(YAML.load_file(options[:config]))
+client.go
+

@@ -1,40 +1,39 @@
-require 'lib/april/client/parser'
+module APRIL
 
-class Client
-  attr_reader :version, :config
-
-  def initialize ()
+  class Client
+    attr_reader :version, :modules, :config, :user, :nick, :realname, :channels, :irc
 
 
-    @config = YAML.load_file("april.conf")
-    init_args
+    def initialize(config)
+      @version = APRIL::VERSION
 
-  end
+      @modules = {}
 
-  def init_args
-    @config.each do |k,v|
-      self.class.send(:define_method, k, proc{v})
+      @irc = APRIL::Socket.new
+
+      @config = config
+      @config.each do |k,v|
+        self.class.send(:define_method, k, proc{v})
+      end
+
+      @nick = informations[0]["nick"]
+      @user = informations[1]["user"]
+      @realname = informations[2]["realname"]
+      @channels = channels
     end
-  end
 
-  def connect()
-    @socket = TCPSocket.new(config["server"], config["port"])
-    write "NICK #{informations[0]["nick"]}"
-    write "USER #{informations[1]["user"]} * * :#{informations[2]["realname"]}"
-    write "JOIN #cacca"
-    listen
-  end
+    def go
 
-  def listen
-    until @socket.eof? do
-      parse @socket.gets
+      @irc.connect(server, port)
+
+      @irc.user(@user, @realname)
+      @irc.nick(@nick)
+
+      @irc.join(@channels)
+
+      @irc.listen
     end
-  end
 
-  def write(msg)
-    puts ">> #{msg}"
-    @socket.puts "#{msg}\n"
   end
-
 end
 
