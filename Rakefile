@@ -5,7 +5,7 @@ require 'rake/gempackagetask'
 require 'lib/april'
 
 NAME = 'april'
-VERSION = April::VERSION
+VERSION = APRIL::VERSION
 
 CLEAN.include ["*.gem"]
 
