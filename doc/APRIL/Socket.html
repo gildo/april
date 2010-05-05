@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: APRIL::Socket</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo; 
+    <span class='title'><a href="../APRIL.html" title="APRIL (module)">APRIL</a></span>
+     &raquo; 
+    <span class="title">Socket</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: APRIL::Socket 
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">APRIL::Socket</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a href="PARSER.html" title="APRIL::PARSER (module)">PARSER</a></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/april/socket.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+  
+  
+  
+  <h2>Instance Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port-instance_method" title="#port (instance method)">- (Object) <strong>port</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute port.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server-instance_method" title="#server (instance method)">- (Object) <strong>server</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute server.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#socket-instance_method" title="#socket (instance method)">- (Object) <strong>socket</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute socket.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>Instance Method Summary</h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">- (Object) <strong>connect</strong>(server, port) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join-instance_method" title="#join (instance method)">- (Object) <strong>join</strong>(channels) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Send JOIN command.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listen-instance_method" title="#listen (instance method)">- (Object) <strong>listen</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nick-instance_method" title="#nick (instance method)">- (Object) <strong>nick</strong>(nick) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Send NICK command.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#user-instance_method" title="#user (instance method)">- (Object) <strong>user</strong>(user, realname) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Send USER command.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#write-instance_method" title="#write (instance method)">- (Object) <strong>write</strong>(msg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a href="PARSER.html" title="APRIL::PARSER (module)">PARSER</a></h3>
+  <p class="inherited"><a href="PARSER.html#handle-instance_method" title="APRIL::PARSER#handle (method)">#handle</a></p>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="port-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="port-instance_method">
+  
+    - (<tt>Object</tt>) <strong>port</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute port
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id port'>port</span>
+  <span class='ivar'>@port</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="server-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="server-instance_method">
+  
+    - (<tt>Object</tt>) <strong>server</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute server
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id server'>server</span>
+  <span class='ivar'>@server</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="socket-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="socket-instance_method">
+  
+    - (<tt>Object</tt>) <strong>socket</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute socket
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id socket'>socket</span>
+  <span class='ivar'>@socket</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="connect-instance_method">
+  
+    - (<tt>Object</tt>) <strong>connect</strong>(server, port) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id connect'>connect</span><span class='lparen'>(</span><span class='id server'>server</span><span class='comma'>,</span> <span class='id port'>port</span><span class='rparen'>)</span>
+  <span class='ivar'>@server</span> <span class='op'>=</span> <span class='id server'>server</span>
+  <span class='ivar'>@port</span> <span class='op'>=</span> <span class='id port'>port</span>
+
+  <span class='ivar'>@socket</span> <span class='op'>=</span> <span class='const'>TCPSocket</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='ivar'>@server</span><span class='comma'>,</span> <span class='ivar'>@port</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="join-instance_method">
+  
+    - (<tt>Object</tt>) <strong>join</strong>(channels) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Send JOIN command
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id join'>join</span><span class='lparen'>(</span><span class='id channels'>channels</span><span class='rparen'>)</span>
+  <span class='id channels'>channels</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id channel'>channel</span><span class='op'>|</span>
+    <span class='id write'>write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>JOIN #</span><span class='embexpr_beg'>#{</span><span class='id channel'>channel</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="listen-instance_method">
+  
+    - (<tt>Object</tt>) <strong>listen</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id listen'>listen</span>
+  <span class='kw'>until</span> <span class='ivar'>@socket</span><span class='period'>.</span><span class='id eof?'>eof?</span> <span class='kw'>do</span>
+    <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;&lt; </span><span class='embexpr_beg'>#{</span><span class='ivar'>@socket</span><span class='period'>.</span><span class='id gets'>gets</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id handle'>handle</span> <span class='lparen'>(</span><span class='ivar'>@socket</span><span class='period'>.</span><span class='id gets'>gets</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="nick-instance_method">
+  
+    - (<tt>Object</tt>) <strong>nick</strong>(nick) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Send NICK command
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id nick'>nick</span><span class='lparen'>(</span><span class='id nick'>nick</span><span class='rparen'>)</span>
+  <span class='id write'>write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NICK </span><span class='embexpr_beg'>#{</span><span class='id nick'>nick</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="user-instance_method">
+  
+    - (<tt>Object</tt>) <strong>user</strong>(user, realname) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Send USER command
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id user'>user</span><span class='lparen'>(</span><span class='id user'>user</span><span class='comma'>,</span> <span class='id realname'>realname</span><span class='rparen'>)</span>
+  <span class='id write'>write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>USER </span><span class='embexpr_beg'>#{</span><span class='id user'>user</span><span class='rbrace'>}</span><span class='tstring_content'> * * :</span><span class='embexpr_beg'>#{</span><span class='id realname'>realname</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="write-instance_method">
+  
+    - (<tt>Object</tt>) <strong>write</strong>(msg) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/april/socket.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id write'>write</span><span class='lparen'>(</span><span class='id msg'>msg</span><span class='rparen'>)</span>
+  <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;&gt; </span><span class='embexpr_beg'>#{</span><span class='id msg'>msg</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@socket</span><span class='period'>.</span><span class='id write'>write</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id msg'>msg</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed May  5 10:51:22 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.4 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>
