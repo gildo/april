@@ -9,7 +9,8 @@ SPEC = Gem::Specification.new do |s|
   s.summary = 'IRC Client Library'
   s.description = s.summary
   s.platform = Gem::Platform::RUBY
-  s.files = %w(README.markdown CHANGES.markdown) + Dir["{lib,etc,examples}/**/*"]
+  s.files = %w(README.markdown HISTORY.markdown) + 
+Dir["{lib,etc,examples}/**/*"]
   s.executables = ['bot']
   s.require_path = 'lib'
   s.has_rdoc = false
