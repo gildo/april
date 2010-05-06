@@ -1,7 +1,0 @@
-lib/april.rb b6502998624136c45393768af2bbcb6ab7435d99
-lib/april/utils.rb 70de7ddff536745801f0ab799bdf5617f5be52ae
-lib/april/parser.rb 060e2c995e43a5e0dc3e8c7812c53df81095a6f5
-lib/april/client.rb 04e4dc76434297dd9364569a60111d3f1a185f65
-lib/april/module.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
-lib/april/socket.rb 926a9d43d77c45f7f9632fac5e3849248213f601
-lib/april/modules/Logger.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
