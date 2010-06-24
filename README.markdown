@@ -20,7 +20,7 @@ Using
 
 edit april.conf && ruby bot.rb :)
 
-Contributing
+Contributing (I will pay you 100 bucks)
 ------------
 
 Once you've made your great commits:
