@@ -20,7 +20,7 @@ Using
 
 edit april.conf && ruby bot.rb :)
 
-Contributing (I will pay you 100 bucks)
+Contributing 
 ------------
 
 Once you've made your great commits:
@@ -35,6 +35,7 @@ Author
 ------
 
 fyskij :: fyskij@gmail.org
+
 
 [0]: http://help.github.com/forking/
 [1]: http://github.com/fyskij/april/issues
